@@ -270,9 +270,7 @@ const Contact = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
-                <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-[28px] border border-white/10 bg-white/[0.04]">
-                  <BrandMark className="h-11 w-11" />
-                </div>
+                <BrandMark className="mx-auto mb-5 h-16 w-16" decorative={false} />
                 <h3 className="text-xl font-semibold mb-2">{brand.companyName}</h3>
                 <p className="text-white/60">{brand.address}</p>
                 <p className="text-white/40 text-sm mt-1">{brand.locationNote}</p>

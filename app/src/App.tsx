@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import Product from './pages/Product';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import { BrandLockup } from '@/components/Brand';
+import { BrandMark } from '@/components/Brand';
+import { brand } from '@/lib/brand';
 import { Toaster } from '@/components/ui/sonner';
 
 type PageType = 'home' | 'product' | 'about' | 'contact';
@@ -46,7 +47,8 @@ function App() {
     return (
       <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
         <div className="text-center">
-          <BrandLockup className="mx-auto mb-6" />
+          <BrandMark className="mx-auto mb-5 h-16 w-16" decorative={false} />
+          <div className="mb-4 text-2xl font-semibold text-white">{brand.companyName}</div>
           <div className="w-32 h-px bg-white/20 mx-auto overflow-hidden">
             <div
               className="w-full h-full animate-[slideInLeft_1s_ease-in-out_infinite]"
