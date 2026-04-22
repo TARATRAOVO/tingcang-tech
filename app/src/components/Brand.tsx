@@ -1,6 +1,6 @@
 import { assetUrl } from '@/lib/asset-url';
-import { brand } from '@/lib/brand';
 import { cn } from '@/lib/utils';
+import { brand } from '@/lib/brand';
 
 interface BrandMarkProps {
   className?: string;
@@ -8,11 +8,11 @@ interface BrandMarkProps {
 }
 
 export const BrandMark = ({ className, decorative = true }: BrandMarkProps) => {
-  const alt = decorative ? '' : `${brand.companyName} logo`;
+  const alt = decorative ? '' : `${brand.companyName} 图形标志`;
 
   return (
     <img
-      src={assetUrl('/brand-mark.svg')}
+      src={assetUrl('/brand-mark.png')}
       alt={alt}
       aria-hidden={decorative || undefined}
       className={cn('h-10 w-10 object-contain', className)}
@@ -24,39 +24,33 @@ interface BrandLockupProps {
   className?: string;
   compact?: boolean;
   showEnglish?: boolean;
+  decorative?: boolean;
 }
 
 export const BrandLockup = ({
   className,
   compact = false,
-  showEnglish = true,
+  decorative = false,
 }: BrandLockupProps) => {
+  const alt = decorative ? '' : `${brand.companyName} logo`;
+
   return (
-    <div className={cn('flex items-center gap-3', className)}>
-      <div
+    <div
+      className={cn(
+        'inline-flex items-center rounded-[22px] border border-white/10 bg-white/95 shadow-[0_14px_32px_rgba(0,0,0,0.28)]',
+        compact ? 'px-2.5 py-1.5' : 'px-3 py-2',
+        className
+      )}
+    >
+      <img
+        src={assetUrl('/brand-logo.png')}
+        alt={alt}
+        aria-hidden={decorative || undefined}
         className={cn(
-          'relative flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]',
-          compact ? 'h-10 w-10' : 'h-12 w-12'
+          'block w-auto max-w-none object-contain',
+          compact ? 'h-8 md:h-9' : 'h-10 md:h-11'
         )}
-      >
-        <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_30%_30%,rgba(255,138,0,0.14),transparent_58%),radial-gradient(circle_at_70%_70%,rgba(20,156,230,0.14),transparent_58%)]" />
-        <BrandMark className={compact ? 'h-6 w-6' : 'h-7 w-7'} />
-      </div>
-      <div className="min-w-0">
-        <div
-          className={cn(
-            'truncate font-semibold tracking-tight text-white',
-            compact ? 'text-base md:text-lg' : 'text-lg md:text-xl'
-          )}
-        >
-          {brand.companyName}
-        </div>
-        {showEnglish && (
-          <div className="hidden text-[10px] uppercase tracking-[0.26em] text-white/35 md:block">
-            {brand.englishName}
-          </div>
-        )}
-      </div>
+      />
     </div>
   );
 };
