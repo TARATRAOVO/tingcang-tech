@@ -1,0 +1,12 @@
+.DS_Store
+
+# Local build/runtime artifacts
+app/node_modules/
+app/dist/
+app/.vite/
+app/*.tsbuildinfo
+
+# Bundled export archives not needed in GitHub repo
+*.tar.gz
+*.zip
+ziYTE6QX
