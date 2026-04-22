@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Product from './pages/Product';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import { BrandMark } from '@/components/Brand';
+import { brand } from '@/lib/brand';
 import { Toaster } from '@/components/ui/sonner';
 
 type PageType = 'home' | 'product' | 'about' | 'contact';
@@ -45,11 +47,15 @@ function App() {
     return (
       <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
         <div className="text-center">
-          <div className="text-2xl font-semibold mb-4">
-            抱朴<span className="text-blue-400">科技</span>
+          <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-[28px] border border-white/10 bg-white/[0.04]">
+            <BrandMark className="h-12 w-12" />
           </div>
+          <div className="text-2xl font-semibold mb-4">{brand.companyName}</div>
           <div className="w-32 h-px bg-white/20 mx-auto overflow-hidden">
-            <div className="w-full h-full bg-blue-400 animate-[slideInLeft_1s_ease-in-out_infinite]" />
+            <div
+              className="w-full h-full animate-[slideInLeft_1s_ease-in-out_infinite]"
+              style={{ background: 'linear-gradient(90deg, #ff8a00 0%, #149ce6 100%)' }}
+            />
           </div>
         </div>
       </div>

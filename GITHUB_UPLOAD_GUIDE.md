@@ -7,8 +7,8 @@
 1. 登录 GitHub 账号
 2. 点击右上角 **+** 按钮，选择 **New repository**
 3. 填写仓库信息：
-   - **Repository name**: `baopu-tech-website` (或你喜欢的名字)
-   - **Description**: 抱朴科技官方网站 - 巡天智能天线扫描系统
+   - **Repository name**: `tingcang-tech` (或你喜欢的名字)
+   - **Description**: 上海霆藏科技官方网站 - 巡天智能扫频系统
    - **Visibility**: Public (或 Private)
    - 不要勾选 "Initialize this repository with a README"
 4. 点击 **Create repository**
@@ -19,7 +19,7 @@
 
 ```bash
 # 进入项目目录
-cd baopu-tech-website
+cd tingcang-tech
 
 # 初始化 Git 仓库
 git init
@@ -28,10 +28,10 @@ git init
 git add .
 
 # 提交
-git commit -m "Initial commit: 抱朴科技官网项目"
+git commit -m "Initial commit: 上海霆藏科技官网项目"
 
 # 添加远程仓库（将 YOUR_USERNAME 替换为你的 GitHub 用户名）
-git remote add origin https://github.com/YOUR_USERNAME/baopu-tech-website.git
+git remote add origin https://github.com/YOUR_USERNAME/tingcang-tech.git
 
 # 推送到 GitHub
 git branch -M main
@@ -75,7 +75,7 @@ git push -u origin main
 ## 项目文件清单
 
 ```
-baopu-tech-website/
+tingcang-tech/
 ├── README.md              # 项目说明文档
 ├── package.json           # 项目依赖配置
 ├── tsconfig.json          # TypeScript 配置
@@ -126,7 +126,7 @@ npm install --save-dev gh-pages
 
 ```json
 {
-  "homepage": "https://YOUR_USERNAME.github.io/baopu-tech-website",
+  "homepage": "https://YOUR_USERNAME.github.io/tingcang-tech",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -147,7 +147,7 @@ npm run deploy
 ### Q: 推送时提示权限错误？
 A: 确保已配置 GitHub 凭据，或使用 SSH 密钥：
 ```bash
-git remote set-url origin git@github.com:YOUR_USERNAME/baopu-tech-website.git
+git remote set-url origin git@github.com:YOUR_USERNAME/tingcang-tech.git
 ```
 
 ### Q: node_modules 需要上传吗？

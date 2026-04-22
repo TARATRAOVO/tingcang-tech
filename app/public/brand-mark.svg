@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" fill="none">
+  <defs>
+    <linearGradient id="tingcang-orange" x1="41" y1="183" x2="198" y2="-6" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9C1A" />
+      <stop offset="1" stop-color="#FF7A00" />
+    </linearGradient>
+    <linearGradient id="tingcang-blue" x1="70" y1="129" x2="145" y2="51" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34B8FF" />
+      <stop offset="1" stop-color="#149CE6" />
+    </linearGradient>
+  </defs>
+  <g stroke-linecap="round" stroke-width="24">
+    <path d="M130 42L192 0" stroke="url(#tingcang-orange)" />
+    <path d="M46 95L80 68" stroke="url(#tingcang-orange)" />
+    <path d="M46 178L158 86" stroke="url(#tingcang-orange)" />
+    <path d="M106 84L139 58" stroke="url(#tingcang-blue)" />
+    <path d="M74 122L106 96" stroke="url(#tingcang-blue)" />
+  </g>
+</svg>

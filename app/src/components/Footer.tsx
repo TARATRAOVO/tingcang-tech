@@ -1,4 +1,6 @@
 import { ArrowUp } from 'lucide-react';
+import { BrandLockup } from '@/components/Brand';
+import { brand } from '@/lib/brand';
 
 interface FooterProps {
   onPageChange: (page: string) => void;
@@ -29,16 +31,18 @@ const Footer = ({ onPageChange }: FooterProps) => {
           <div className="lg:col-span-2">
             <button
               onClick={() => handleNavClick('home')}
-              className="text-2xl font-semibold tracking-tight text-white hover:opacity-80 transition-opacity mb-4"
+              className="mb-5 text-left hover:opacity-80 transition-opacity"
             >
-              抱朴<span className="text-blue-400">科技</span>
+              <BrandLockup />
             </button>
             <p className="text-white/60 max-w-md mb-6 leading-relaxed">
-              巡天智能天线扫描系统 — 通信基础设施信号级数字化管理平台，
+              {brand.productName} — 通信基础设施信号级数字化管理平台，
               推动低空智能巡检标准化发展。
             </p>
             <div className="flex items-center gap-4">
-              <span className="text-sm text-white/40">© 2024 抱朴科技</span>
+              <span className="text-sm text-white/40">
+                © {brand.copyrightYear} {brand.companyName}
+              </span>
               <span className="text-white/20">|</span>
               <span className="text-sm text-white/40">保留所有权利</span>
             </div>
@@ -71,21 +75,21 @@ const Footer = ({ onPageChange }: FooterProps) => {
             <ul className="space-y-3 text-white/60">
               <li>
                 <a
-                  href="mailto:contact@baopu.tech"
+                  href={brand.emailHref}
                   className="hover:text-white transition-colors"
                 >
-                  contact@baopu.tech
+                  {brand.email}
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+862112345678"
+                  href={brand.phoneHref}
                   className="hover:text-white transition-colors"
                 >
-                  +86 21 1234 5678
+                  {brand.phone}
                 </a>
               </li>
-              <li>上海市闵行区东川路800号</li>
+              <li>{brand.address}</li>
             </ul>
           </div>
         </div>

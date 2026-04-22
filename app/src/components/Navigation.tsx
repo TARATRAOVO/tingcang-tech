@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { BrandLockup } from '@/components/Brand';
 
 interface NavigationProps {
   currentPage: string;
@@ -52,9 +53,9 @@ const Navigation = ({ currentPage, onPageChange }: NavigationProps) => {
             {/* Logo */}
             <button
               onClick={() => handleNavClick('home')}
-              className="text-xl md:text-2xl font-semibold tracking-tight text-white hover:opacity-80 transition-opacity"
+              className="text-left hover:opacity-80 transition-opacity"
             >
-              抱朴<span className="text-blue-400">科技</span>
+              <BrandLockup compact={isScrolled} showEnglish={!isScrolled} />
             </button>
 
             {/* Desktop Navigation */}

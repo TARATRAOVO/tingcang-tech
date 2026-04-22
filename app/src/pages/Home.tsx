@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown, Radio, Scan, Database, Zap } from 'lucide-react';
+import { BrandMark } from '@/components/Brand';
 import { assetUrl } from '@/lib/asset-url';
+import { brand } from '@/lib/brand';
 
 interface HomeProps {
   onPageChange: (page: string) => void;
@@ -68,12 +70,14 @@ const Home = ({ onPageChange }: HomeProps) => {
           <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
             <div
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 transition-all duration-1000 ${
+              className={`inline-flex items-center gap-3 px-4 py-2 rounded-full glass mb-8 transition-all duration-1000 ${
                 isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
-              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-              <span className="text-sm text-white/80">通信基础设施信号级数字化管理平台</span>
+              <BrandMark className="h-5 w-5 shrink-0" />
+              <span className="text-sm text-white/85">{brand.companyName}</span>
+              <span className="h-1 w-1 rounded-full bg-white/20" />
+              <span className="text-sm text-white/70">通信基础设施信号级数字化管理平台</span>
             </div>
 
             {/* Main Title */}
@@ -84,7 +88,7 @@ const Home = ({ onPageChange }: HomeProps) => {
             >
               <span className="gradient-text">巡天智能</span>
               <br />
-              <span className="text-white">天线扫描系统</span>
+              <span className="text-white">扫频系统</span>
             </h1>
 
             {/* Subtitle */}

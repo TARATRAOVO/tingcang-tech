@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { GraduationCap, Code2, Rocket, Target, Award, Users } from 'lucide-react';
 import { assetUrl } from '@/lib/asset-url';
+import { brand } from '@/lib/brand';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -93,10 +94,10 @@ const About = () => {
             }`}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-6">
-              关于<span className="gradient-text">抱朴科技</span>
+              关于<span className="gradient-text">{brand.companyName}</span>
             </h1>
             <p className="text-xl text-white/60 leading-relaxed">
-              抱朴科技是一家专注于通信基础设施数字化管理的科技公司，
+              {brand.companyName}是一家专注于通信基础设施数字化管理的科技公司，
               致力于通过创新技术推动通信资产巡检的智能化升级。
             </p>
           </div>

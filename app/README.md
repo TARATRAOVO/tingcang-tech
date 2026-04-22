@@ -1,4 +1,4 @@
-# 抱朴科技 - 巡天智能天线扫描系统官网
+# 上海霆藏科技 - 巡天智能扫频系统官网
 
 [![Website](https://img.shields.io/badge/Website-Live-blue)](https://tqjusafj7v7uo.ok.kimi.link)
 [![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://react.dev/)
@@ -7,7 +7,7 @@
 
 ## 项目简介
 
-抱朴科技官方网站，展示"巡天智能天线扫描系统"——一套基于无人机自主飞行与SDR频谱扫描技术的通信基础设施数字化管理解决方案。
+上海霆藏科技官方网站，展示"巡天智能扫频系统"——一套基于无人机自主飞行与SDR频谱扫描技术的通信基础设施数字化管理解决方案。
 
 ## 技术栈
 
@@ -101,4 +101,4 @@ npm run build
 
 ## 许可证
 
-© 2024 抱朴科技. 保留所有权利.
+© 2026 上海霆藏科技. 保留所有权利.

@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin, MessageCircle } from 'lucide-react';
+import { BrandMark } from '@/components/Brand';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { brand } from '@/lib/brand';
 import { toast } from 'sonner';
 
 const Contact = () => {
@@ -51,19 +53,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: '邮箱',
-      value: 'contact@baopu.tech',
-      href: 'mailto:contact@baopu.tech',
+      value: brand.email,
+      href: brand.emailHref,
     },
     {
       icon: Phone,
       label: '电话',
-      value: '+86 21 1234 5678',
-      href: 'tel:+862112345678',
+      value: brand.phone,
+      href: brand.phoneHref,
     },
     {
       icon: MapPin,
       label: '地址',
-      value: '上海市闵行区东川路800号',
+      value: brand.address,
       href: '#',
     },
   ];
@@ -268,10 +270,12 @@ const Contact = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
-                <MapPin size={48} className="text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">抱朴科技</h3>
-                <p className="text-white/60">上海市闵行区东川路800号</p>
-                <p className="text-white/40 text-sm mt-1">上海交通大学</p>
+                <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-[28px] border border-white/10 bg-white/[0.04]">
+                  <BrandMark className="h-11 w-11" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{brand.companyName}</h3>
+                <p className="text-white/60">{brand.address}</p>
+                <p className="text-white/40 text-sm mt-1">{brand.locationNote}</p>
               </div>
             </div>
             <div
@@ -299,13 +303,13 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="mailto:contact@baopu.tech"
+                href={brand.emailHref}
                 className="btn-primary flex items-center gap-2"
               >
                 <Mail size={18} />
                 发送邮件
               </a>
-              <a href="tel:+862112345678" className="btn-outline flex items-center gap-2">
+              <a href={brand.phoneHref} className="btn-outline flex items-center gap-2">
                 <Phone size={18} />
                 拨打电话
               </a>
