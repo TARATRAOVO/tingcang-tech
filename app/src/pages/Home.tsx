@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown, Radio, Scan, Database, Zap } from 'lucide-react';
+import { assetUrl } from '@/lib/asset-url';
 
 interface HomeProps {
   onPageChange: (page: string) => void;
@@ -53,7 +54,7 @@ const Home = ({ onPageChange }: HomeProps) => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/hero-bg.jpg"
+            src={assetUrl('/hero-bg.jpg')}
             alt="City night view"
             className="w-full h-full object-cover"
           />
@@ -195,7 +196,7 @@ const Home = ({ onPageChange }: HomeProps) => {
             {/* Image */}
             <div className="relative img-zoom rounded-2xl overflow-hidden">
               <img
-                src="/scanning.jpg"
+                src={assetUrl('/scanning.jpg')}
                 alt="Drone scanning"
                 className="w-full aspect-video object-cover"
               />

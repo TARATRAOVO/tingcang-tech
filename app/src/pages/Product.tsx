@@ -11,6 +11,7 @@ import {
   Wifi,
   Crosshair,
 } from 'lucide-react';
+import { assetUrl } from '@/lib/asset-url';
 
 const Product = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -341,7 +342,7 @@ const Product = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden img-zoom">
                 <img
-                  src="/drone.jpg"
+                  src={assetUrl('/drone.jpg')}
                   alt="Hardware system"
                   className="w-full h-full object-cover"
                 />

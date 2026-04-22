@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { GraduationCap, Code2, Rocket, Target, Award, Users } from 'lucide-react';
+import { assetUrl } from '@/lib/asset-url';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +13,7 @@ const About = () => {
     {
       name: '彭总',
       role: '太上长老',
-      image: '/team-peng.jpg',
+      image: assetUrl('/team-peng.jpg'),
       background: '筑基期修士',
       expertise: '炼丹 · 符箓',
       description: '修仙界资深前辈，精通丹道与符箓之术，为团队提供超凡脱俗的技术指引与精神支撑。',
@@ -20,7 +21,7 @@ const About = () => {
     {
       name: '非哥',
       role: 'AI技术负责人',
-      image: '/team-feige.png',
+      image: assetUrl('/team-feige.png'),
       background: '上海交通大学工学硕士',
       expertise: '计算机视觉 / AIGC / 三维重建',
       description: '上海交通大学工学学士、硕士，信息工程（图像信息处理）方向。长期聚焦计算机视觉与AIGC领域，在数字人、数字孪生、三维重建、多模态大模型等方向开展研究与实践。擅长将前沿AI技术转化为可落地的产品与平台能力。',
@@ -28,7 +29,7 @@ const About = () => {
     {
       name: '潘笛',
       role: '技术型创始人',
-      image: '/team-pandi.jpg',
+      image: assetUrl('/team-pandi.jpg'),
       background: '上海交大硕士 · 腾讯光子',
       expertise: '游戏AI / VR交互 / 工程交付',
       description: '腾讯光子战斗AI方向出身，用系统级方法做复杂问题，习惯把"机制—数据—工具链—验收"串成闭环。横跨游戏AI、VR交互、机器学习与工程交付，具备把技术变成生产力的综合优势。',
